@@ -1,0 +1,159 @@
+<STYLE type=text/css>
+BODY {
+	FONT-SIZE: 10pt; COLOR: #000066; FONT-FAMILY: Trebuchet MS;
+}
+
+DIV {
+	FONT-SIZE: 10pt; COLOR: #000066; FONT-FAMILY: Trebuchet MS;
+}
+TD {
+	FONT-SIZE: 10pt; COLOR: #000066; FONT-FAMILY: Trebuchet MS;
+}
+LAYER {
+	FONT-SIZE: 10pt; COLOR: #000066; FONT-FAMILY: Trebuchet MS;
+}	
+A:link {
+	TEXT-DECORATION: none ; color: #00099
+}
+A:active {
+	TEXT-DECORATION: none ; color: #00099
+}
+A:visited {
+	 TEXT-DECORATION: none ; color: #55555
+}
+A:hover {
+	COLOR: #fa0202; TEXT-DECORATION: none
+}
+INPUT {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #cccccc 1px solid; COLOR: #666666; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; 
+}
+TEXTAREA {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #cccccc 1px solid; COLOR: #666666; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; BACKGROUND-COLOR: #ffffff
+}
+SELECT {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #cccccc 1px solid; COLOR: #666666; BORDER-BOTTOM: #cccccc 1px solid; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif; BACKGROUND-COLOR: #ffffff
+}
+
+.titulo {
+	margin:0;
+	padding:0;
+	list-style:none;
+	background: #f5f5f5;
+	font:bold 14px Arial;
+	}
+
+.titulo li{
+	border-top: 1px solid #ccc;
+	}
+	
+.titulo li a {
+	display:block;
+	margin-top: 6px;
+	color:blue;
+	}		
+
+.titulo li a:hover{
+	color:#000;
+	
+	}		
+	
+	
+.item {
+	margin:2;
+	padding:0;
+	list-style:none;
+	background: #fff;
+	font:12px Arial;
+	}
+	
+.item li{
+	border-top: 1px solid #ccc;
+	}
+
+.item li a:hover{
+	color:blue;	
+	
+	
+	}			
+	
+.item li a{
+	display:block;
+	
+	color:#2eacd5;
+	
+	}
+	
+	
+.mostra {
+	display:block;
+	}
+	
+.esconde{
+	display:none;
+	}
+	
+.titulo3{
+	color:333;
+	font-family:arial,verdana;
+	font-weight:bold;
+	font-size:14;
+	}
+	
+#nav, #nav ul{
+	width: 50em;
+	list-style:none;
+	font: bold 12px Arial, Verdana, Helvetica;
+	padding:0;
+	margin:0
+	}
+
+	
+#nav li{
+	float: left;
+	}
+	
+#nav a{
+	display: block;
+	width: 10em;
+	height: 2em;
+	line-height:2;
+	text-align:center;
+	text-decoration:none;
+	background-color: #f5f5f5; /* IE precisa desta declaração*/
+	color: #999;
+	border-bottom: 1px solid #ccc;
+	border-width: 0 1px 1px;
+	}
+	
+#nav a:hover{
+	text-decoration: none;
+	background: #c7daec;
+	color: #69c;
+	
+	}
+	
+#nav li ul {
+	position: absolute;
+	left: -1000em;
+	width: 10em;
+	margin:0;
+	}
+	
+#nav ul ul{
+	margin: -2.1em 0 0 10.1em;
+	}
+	
+#nav li:hover ul ul, #nav li.over ul ul {
+	left: -1000em;
+	}
+	
+#nav li:hover ul, #nav li li:hover ul, #nav li.over ul, #nav li li.over ul{
+	left:auto;
+	}
+	
+#areaRestrita{
+	width:150;
+	height:140;
+	border:1px solid #ccc;						
+
+</STYLE>
