@@ -17,6 +17,7 @@ import {ContatoDAO} from "../entidades/contatoDAO.service";
 export class IncContatoComponent{
     contato:Contato;
     contatoDAO:ContatoDAO;
+    msgCadastrado:boolean = true;
     
     constructor(contato:Contato,contatoDAO:ContatoDAO ){
          this.contato = contato;
@@ -26,7 +27,12 @@ export class IncContatoComponent{
  
     cadastrar(event){
         event.preventDefault();
-        this.contatoDAO.cadastra(this.contato).subscribe(() => {console.log(this.contato)});
+        this.contatoDAO.cadastra(this.contato)
+        .subscribe(() => {
+            console.log(this.contato); 
+            this.msgCadastrado = false;
+            this.contato = new Contato();
+        });
         
         }   
 

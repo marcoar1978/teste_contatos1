@@ -11,31 +11,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var contatoDAO_service_1 = require("../entidades/contatoDAO.service");
-var ListaContatosComponent = (function () {
-    function ListaContatosComponent(_route, contatoDAO, _router) {
+var ContatosRemoveComponent = (function () {
+    function ContatosRemoveComponent(_route, contatoDAO, _router) {
         var _this = this;
-        this.contatos = [];
-        this.divHiddenRemocao = true;
+        this.contato = [];
+        this.remocaoOk = 'ok';
         this.route = _route;
         this.router = _router;
         this.contatoDAO = contatoDAO;
         this.route.params
-            .subscribe(function (params) {
-            if (params['remocao'] == 'ok') {
-                _this.divHiddenRemocao = false;
-            }
-        });
-        this.contatoDAO.lista().subscribe(function (result) { _this.contatos = result; }, function (erro) { console.log(erro); });
+            .subscribe(function (params) { _this.id = params['id']; });
+        //this.contatoDAO.buscaPorId(this.id).subscribe(result => {this.contato = result}, erros => {console.log(erros)} );
+        this.router.navigate(['/lista_contato', this.remocaoOk]);
+        //this.contatoDAO.buscaPorId("teste ok");
+        // this.num = this.contato.length; 
     }
-    ListaContatosComponent = __decorate([
+    ContatosRemoveComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'lista_contatos',
-            templateUrl: './lista_contatos.component.html'
+            selector: 'contatos_remove',
+            templateUrl: './contatos_remove.component.html'
         }), 
         __metadata('design:paramtypes', [router_1.ActivatedRoute, contatoDAO_service_1.ContatoDAO, router_1.Router])
-    ], ListaContatosComponent);
-    return ListaContatosComponent;
+    ], ContatosRemoveComponent);
+    return ContatosRemoveComponent;
 }());
-exports.ListaContatosComponent = ListaContatosComponent;
-//# sourceMappingURL=lista_contatos.component.js.map
+exports.ContatosRemoveComponent = ContatosRemoveComponent;
+//# sourceMappingURL=contatos_remove.component.js.map

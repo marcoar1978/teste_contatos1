@@ -11,6 +11,7 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { IncContatoComponent } from './inclusao/inc_contato.component';
 import { ListaContatosComponent } from './lista_contatos/lista_contatos.component';
 import { ContatosDetalhesComponent } from './contatos_detalhes/contatos_detalhes.component';
+import { ContatosRemoveComponent } from './contatos_remove/contatos_remove.component';
 
 import {Contato } from './entidades/contato.service';
 import {ContatoDAO } from './entidades/contatoDAO.service';
@@ -24,7 +25,8 @@ import 'rxjs/add/operator/map';
                     CabecalhoComponent, 
                     IncContatoComponent,
                      ListaContatosComponent, 
-                     ContatosDetalhesComponent],
+                     ContatosDetalhesComponent,
+                     ContatosRemoveComponent],
     providers: [Contato, ContatoDAO],
     bootstrap : [AppComponent]
 })

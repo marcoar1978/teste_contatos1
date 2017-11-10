@@ -13,13 +13,19 @@ var contato_service_1 = require("../entidades/contato.service");
 var contatoDAO_service_1 = require("../entidades/contatoDAO.service");
 var IncContatoComponent = (function () {
     function IncContatoComponent(contato, contatoDAO) {
+        this.msgCadastrado = true;
         this.contato = contato;
         this.contatoDAO = contatoDAO;
     }
     IncContatoComponent.prototype.cadastrar = function (event) {
         var _this = this;
         event.preventDefault();
-        this.contatoDAO.cadastra(this.contato).subscribe(function () { console.log(_this.contato); });
+        this.contatoDAO.cadastra(this.contato)
+            .subscribe(function () {
+            console.log(_this.contato);
+            _this.msgCadastrado = false;
+            _this.contato = new contato_service_1.Contato();
+        });
     };
     IncContatoComponent = __decorate([
         core_1.Component({
