@@ -1,0 +1,11 @@
+
+
+
+<table align='center' width='500' style='border-collapse:collapse;' border>  
+     <tr height='30'  *ngFor="let contato of contatos">
+            <td width='150'><a [routerLink]= "['/det_contato/', contato._id]" >{{contato._id}}</a></td>
+            <td width='100'>{{contato.nome}}</td>
+            <td align='right'>{{contato.email}}</td>
+      </tr>      
+
+</table>    

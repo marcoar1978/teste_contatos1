@@ -11,19 +11,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
+var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
-//import { Pag1Component } from './pag1/pag1.component';
-var pag2_component_1 = require('./pag2/pag2.component');
+var app_routes_1 = require('./app.routes');
+var pag1_component_1 = require('./pag1/pag1.component');
+//import { Pag2Component } from './pag2/pag2.component';
 var cabecalho_component_1 = require('./cabecalho/cabecalho.component');
-var listagem_component_1 = require('./listagem/listagem.component');
+var inc_contato_component_1 = require('./inclusao/inc_contato.component');
+var lista_contatos_component_1 = require('./lista_contatos/lista_contatos.component');
+var contatos_detalhes_component_1 = require('./contatos_detalhes/contatos_detalhes.component');
+var contato_service_1 = require('./entidades/contato.service');
+var contatoDAO_service_1 = require('./entidades/contatoDAO.service');
 require('rxjs/add/operator/map');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
-            declarations: [app_component_1.AppComponent, pag2_component_1.Pag2Component, cabecalho_component_1.CabecalhoComponent, listagem_component_1.ListagemComponent],
+            imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, app_routes_1.routing],
+            declarations: [app_component_1.AppComponent,
+                pag1_component_1.Pag1Component,
+                cabecalho_component_1.CabecalhoComponent,
+                inc_contato_component_1.IncContatoComponent,
+                lista_contatos_component_1.ListaContatosComponent,
+                contatos_detalhes_component_1.ContatosDetalhesComponent],
+            providers: [contato_service_1.Contato, contatoDAO_service_1.ContatoDAO],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

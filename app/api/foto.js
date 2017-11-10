@@ -43,7 +43,7 @@ module.exports = function(app) {
 	};
 
 	api.adiciona = function(req, res) {
-
+		 
 		model.create(req.body)
 		.then(function(foto) {
 			res.json(foto);
