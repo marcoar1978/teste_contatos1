@@ -27,7 +27,11 @@ export class ContatoDAO {
     buscaPorId(id:string):Observable<Contato>{
         return this.http.get("/contatos/"+id).map(res => res.json());
        //alert(id);
-         }    
+         }
+
+    removePorId(id:string):Observable<Contato>{
+        return this.http.delete("/contatos/"+id).map(res => res.json());
+    }         
 
          
 

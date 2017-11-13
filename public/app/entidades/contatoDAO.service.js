@@ -26,6 +26,9 @@ var ContatoDAO = (function () {
         return this.http.get("/contatos/" + id).map(function (res) { return res.json(); });
         //alert(id);
     };
+    ContatoDAO.prototype.removePorId = function (id) {
+        return this.http.delete("/contatos/" + id).map(function (res) { return res.json(); });
+    };
     ContatoDAO = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])

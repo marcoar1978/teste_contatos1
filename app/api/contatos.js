@@ -49,7 +49,13 @@ module.exports = function(app) {
         };
 
     api.removePorId = function(req, res) {
-
+		model.remove({'_id' : req.params.id})
+		.then(function() {
+			res.sendStatus(200);
+		}, function(error) {
+			console.log(error);
+			res.sendStatus(500);
+		});
 
     };
  

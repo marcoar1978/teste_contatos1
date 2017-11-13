@@ -4,6 +4,7 @@ import { IncContatoComponent } from './inclusao/inc_contato.component';
 import { ListaContatosComponent } from './lista_contatos/lista_contatos.component';
 import { ContatosDetalhesComponent } from './contatos_detalhes/contatos_detalhes.component';
 import { ContatosRemoveComponent } from './contatos_remove/contatos_remove.component';
+import { ContatosConsNomeComponent } from './contatos_cons_nome/contatos_cons_nome.component';
 
 const appRoutes:Routes = [
     {path: '', component: Pag1Component},
@@ -12,6 +13,7 @@ const appRoutes:Routes = [
     {path: 'lista_contato/:remocao', component: ListaContatosComponent},
     {path: 'det_contato/:id', component: ContatosDetalhesComponent},
     {path: 'remove_contato/:id', component: ContatosRemoveComponent},
+    {path: 'contatos_cons_nome', component: ContatosConsNomeComponent},
 
 ];
 

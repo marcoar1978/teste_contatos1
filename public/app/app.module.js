@@ -21,6 +21,7 @@ var inc_contato_component_1 = require('./inclusao/inc_contato.component');
 var lista_contatos_component_1 = require('./lista_contatos/lista_contatos.component');
 var contatos_detalhes_component_1 = require('./contatos_detalhes/contatos_detalhes.component');
 var contatos_remove_component_1 = require('./contatos_remove/contatos_remove.component');
+var contatos_cons_nome_component_1 = require('./contatos_cons_nome/contatos_cons_nome.component');
 var contato_service_1 = require('./entidades/contato.service');
 var contatoDAO_service_1 = require('./entidades/contatoDAO.service');
 require('rxjs/add/operator/map');
@@ -36,7 +37,8 @@ var AppModule = (function () {
                 inc_contato_component_1.IncContatoComponent,
                 lista_contatos_component_1.ListaContatosComponent,
                 contatos_detalhes_component_1.ContatosDetalhesComponent,
-                contatos_remove_component_1.ContatosRemoveComponent],
+                contatos_remove_component_1.ContatosRemoveComponent,
+                contatos_cons_nome_component_1.ContatosConsNomeComponent],
             providers: [contato_service_1.Contato, contatoDAO_service_1.ContatoDAO],
             bootstrap: [app_component_1.AppComponent]
         }), 

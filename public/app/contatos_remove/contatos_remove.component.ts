@@ -17,18 +17,22 @@ export class ContatosRemoveComponent{
      contatoDAO:ContatoDAO;
      id:string;
      num:Number;
-     remocaoOk:string = 'ok';
+     remocaoOk:string = 'off';
 
-     constructor(_route: ActivatedRoute, contatoDAO:ContatoDAO, _router: Router ){
+     constructor(_route: ActivatedRoute, _contatoDAO:ContatoDAO, _router: Router ){
         this.route = _route;
         this.router = _router;
-        this.contatoDAO = contatoDAO;
+        this.contatoDAO = _contatoDAO;
 
         this.route.params
         .subscribe(params => {  this.id = params['id'];   });
         
-
-        //this.contatoDAO.buscaPorId(this.id).subscribe(result => {this.contato = result}, erros => {console.log(erros)} );
+        var conf = confirm("Deseja efetuar a remoção?");
+        if(conf){
+             this.contatoDAO.removePorId(this.id).subscribe(result => {this.contato = result}, erros => {console.log(erros)} );
+            this.remocaoOk = "ok";
+            }
+       
          
         this.router.navigate(['/lista_contato',this.remocaoOk]);
          //this.contatoDAO.buscaPorId("teste ok");
