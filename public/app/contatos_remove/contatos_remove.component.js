@@ -20,13 +20,13 @@ var ContatosRemoveComponent = (function () {
         this.router = _router;
         this.contatoDAO = _contatoDAO;
         this.route.params
-            .subscribe(function (params) { _this.id = params['id']; });
+            .subscribe(function (params) { _this.id = params['id']; _this.ret = params['ret']; });
         var conf = confirm("Deseja efetuar a remoção?");
         if (conf) {
             this.contatoDAO.removePorId(this.id).subscribe(function (result) { _this.contato = result; }, function (erros) { console.log(erros); });
             this.remocaoOk = "ok";
         }
-        this.router.navigate(['/lista_contato', this.remocaoOk]);
+        this.router.navigate(["/" + this.ret, this.remocaoOk]);
         //this.contatoDAO.buscaPorId("teste ok");
         // this.num = this.contato.length; 
     }

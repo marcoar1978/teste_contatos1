@@ -13,6 +13,7 @@ import { ListaContatosComponent } from './lista_contatos/lista_contatos.componen
 import { ContatosDetalhesComponent } from './contatos_detalhes/contatos_detalhes.component';
 import { ContatosRemoveComponent } from './contatos_remove/contatos_remove.component';
 import { ContatosConsNomeComponent } from './contatos_cons_nome/contatos_cons_nome.component';
+import { JQueryComponent } from './jquery/jquery.component';
 
 import {Contato } from './entidades/contato.service';
 import {ContatoDAO } from './entidades/contatoDAO.service';
@@ -28,7 +29,8 @@ import 'rxjs/add/operator/map';
                      ListaContatosComponent, 
                      ContatosDetalhesComponent,
                      ContatosRemoveComponent,
-                     ContatosConsNomeComponent],
+                     ContatosConsNomeComponent,
+                     JQueryComponent],
     providers: [Contato, ContatoDAO],
     bootstrap : [AppComponent]
 })

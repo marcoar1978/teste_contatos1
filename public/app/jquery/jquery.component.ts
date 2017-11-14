@@ -2,12 +2,12 @@ import {Component, ElementRef} from '@angular/core';
 
 @Component({
     moduleId: module.id,
-    selector: 'pag1',
-    templateUrl : './pag1.component.html';
+    selector: 'jquery',
+    templateUrl : './jquery.component.html';
 
 })
 
-export class Pag1Component{
+export class JQueryComponent{
 
 elemento:ElementRef;
 

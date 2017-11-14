@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import {Contato} from "../entidades/contato.service";
 import {ContatoDAO} from "../entidades/contatoDAO.service";
 
@@ -10,16 +11,29 @@ import {ContatoDAO} from "../entidades/contatoDAO.service";
 })
 
 export class ContatosConsNomeComponent{
-
+ route: ActivatedRoute;
+ router:Router;
 contatos:Contato[] = [];
 numContatos:number = this.contatos.length;
 contatoDAO:ContatoDAO;   
 nome:string;
 mostraConsulta:boolean = true;
+divHiddenRemocao:boolean = true;
 
 
-constructor(_contatoDAO:ContatoDAO){
+constructor(_route: ActivatedRoute, _contatoDAO:ContatoDAO, _router: Router){
+    this.route = _route;
+    this.router = _router;
     this.contatoDAO = _contatoDAO;
+
+     this.route.params
+        .subscribe(params => {
+            if(params['remocao'] == 'ok'){
+                this.divHiddenRemocao = false;
+                }
+
+        });
+
     }
 
 consulta(event){

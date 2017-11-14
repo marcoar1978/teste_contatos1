@@ -9,24 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Pag1Component = (function () {
-    function Pag1Component(_elemento) {
+var JQueryComponent = (function () {
+    function JQueryComponent(_elemento) {
         this.elemento = _elemento;
     }
-    Pag1Component.prototype.desapareceDiv = function () {
+    JQueryComponent.prototype.desapareceDiv = function () {
         $(this.elemento.nativeElement).find("#botao").click(function () {
             alert("botão clicado");
         });
     };
-    Pag1Component = __decorate([
+    JQueryComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'pag1',
-            templateUrl: './pag1.component.html'
+            selector: 'jquery',
+            templateUrl: './jquery.component.html'
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
-    ], Pag1Component);
-    return Pag1Component;
+    ], JQueryComponent);
+    return JQueryComponent;
 }());
-exports.Pag1Component = Pag1Component;
-//# sourceMappingURL=pag1.component.js.map
+exports.JQueryComponent = JQueryComponent;
+//# sourceMappingURL=jquery.component.js.map

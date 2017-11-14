@@ -5,6 +5,7 @@ import { ListaContatosComponent } from './lista_contatos/lista_contatos.componen
 import { ContatosDetalhesComponent } from './contatos_detalhes/contatos_detalhes.component';
 import { ContatosRemoveComponent } from './contatos_remove/contatos_remove.component';
 import { ContatosConsNomeComponent } from './contatos_cons_nome/contatos_cons_nome.component';
+import { JQueryComponent } from './jquery/jquery.component';
 
 const appRoutes:Routes = [
     {path: '', component: Pag1Component},
@@ -12,8 +13,10 @@ const appRoutes:Routes = [
     {path: 'lista_contato', component: ListaContatosComponent},
     {path: 'lista_contato/:remocao', component: ListaContatosComponent},
     {path: 'det_contato/:id', component: ContatosDetalhesComponent},
-    {path: 'remove_contato/:id', component: ContatosRemoveComponent},
+    {path: 'remove_contato/:id/:ret', component: ContatosRemoveComponent},
     {path: 'contatos_cons_nome', component: ContatosConsNomeComponent},
+    {path: 'contatos_cons_nome/:remocao', component: ContatosConsNomeComponent},
+    {path: 'jquery', component: JQueryComponent},
 
 ];
 

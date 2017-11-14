@@ -1,5 +1,8 @@
 <h3 style='text-align:center'>Consulta por nome</h3>
 <br>
+<div class='alert alert-info' [hidden]='divHiddenRemocao'>
+ Remoção efetuado com sucesso.
+</div>  
 <form method='POST' (submit)="consulta($event)">
 <table align='center'>
    <tr>
@@ -22,7 +25,7 @@
             <td width='200'><a [routerLink]= "['/det_contato/', contato._id]" >{{contato._id}}</a></td>
             <td width='100'>{{contato.nome}}</td>
             <td>{{contato.email}}</td>
-            <td align='center'><a [routerLink]= "['/remove_contato/', contato._id]" >remove</a></td>
+            <td align='center'><a [routerLink]= "['/remove_contato/', contato._id, 'contatos_cons_nome']" >remove</a></td>
       </tr>      
 
     </table>      
