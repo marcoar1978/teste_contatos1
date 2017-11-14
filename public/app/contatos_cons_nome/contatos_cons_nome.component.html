@@ -1,1 +1,33 @@
 <h3 style='text-align:center'>Consulta por nome</h3>
+<br>
+<form method='POST' (submit)="consulta($event)">
+<table align='center'>
+   <tr>
+       <td>Nome: <input type='text' name='nome'  [(ngModel)]="nome" id='nome'> - <input type='submit' value='Consultar'>{{nome}}</td>
+   </tr>
+</table> 
+</form> 
+<br>
+
+<div [hidden]="mostraConsulta">
+      <table align='center' width='600' style='border-collapse:collapse;padding:5px;' border>  
+      <tr height='30'>
+            <td align='center'><b>Id</b></td>
+            <td align='center'><b>Nome</b></td>
+            <td align='center'><b>Email</b></td>
+            <td align='center'><b>Remover</b></td>
+      </tr>
+            
+     <tr height='30'  *ngFor="let contato of contatos">
+            <td width='200'><a [routerLink]= "['/det_contato/', contato._id]" >{{contato._id}}</a></td>
+            <td width='100'>{{contato.nome}}</td>
+            <td>{{contato.email}}</td>
+            <td align='center'><a [routerLink]= "['/remove_contato/', contato._id]" >remove</a></td>
+      </tr>      
+
+    </table>      
+
+
+
+</div>    
+          

@@ -26,6 +26,10 @@ var ContatoDAO = (function () {
         return this.http.get("/contatos/" + id).map(function (res) { return res.json(); });
         //alert(id);
     };
+    ContatoDAO.prototype.buscaPorNome = function (nome) {
+        return this.http.get("/contatosPorNome/" + nome).map(function (res) { return res.json(); });
+        //alert(id);
+    };
     ContatoDAO.prototype.removePorId = function (id) {
         return this.http.delete("/contatos/" + id).map(function (res) { return res.json(); });
     };

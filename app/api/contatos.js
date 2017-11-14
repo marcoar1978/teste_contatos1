@@ -42,11 +42,21 @@ module.exports = function(app) {
 			res.sendStatus(500);
 		});
         
+     };
 
+	api.buscaPorNome = function(req, res) {
+		var nome = req.params.nome;
+		console.log("Nome: "+req.params.nome)
+        model.find({"nome": { $regex: '.*' + nome + '.*' }})
+		.then(function(contatos) {
+			res.json(contatos);
+		}, function(error) {
+			console.log(error);
+			res.sendStatus(500);
+		});
+        
+     }; 
 
-
-
-        };
 
     api.removePorId = function(req, res) {
 		model.remove({'_id' : req.params.id})

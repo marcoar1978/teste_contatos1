@@ -9,16 +9,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var contatoDAO_service_1 = require("../entidades/contatoDAO.service");
 var ContatosConsNomeComponent = (function () {
-    function ContatosConsNomeComponent() {
+    function ContatosConsNomeComponent(_contatoDAO) {
+        this.contatos = [];
+        this.numContatos = this.contatos.length;
+        this.mostraConsulta = true;
+        this.contatoDAO = _contatoDAO;
     }
+    ContatosConsNomeComponent.prototype.consulta = function (event) {
+        var _this = this;
+        event.preventDefault();
+        this.contatoDAO.buscaPorNome(this.nome).subscribe(function (result) { _this.contatos = result; }, function (err) { console.log(err); });
+        if (this.contatos.length > 0) {
+            this.mostraConsulta = false;
+        }
+        else {
+            this.mostraConsulta = true;
+        }
+    };
     ContatosConsNomeComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'contatos_cons_nome',
             templateUrl: './contatos_cons_nome.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [contatoDAO_service_1.ContatoDAO])
     ], ContatosConsNomeComponent);
     return ContatosConsNomeComponent;
 }());

@@ -10,4 +10,7 @@ module.exports = function(app) {
 		.get(api.buscaPorId)
 		.delete(api.removePorId)
 		.put(api.atualiza);
+
+	app.route('/contatosPorNome/:nome')
+		.get(api.buscaPorNome)		
 };
